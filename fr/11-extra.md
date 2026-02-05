@@ -19,6 +19,7 @@ Pour aller plus loin, je vous propose d'explorer les ressources ci-dessous.
 - https://www.youtube.com/@TCMSecurityAcademy
 - https://www.youtube.com/@HackinGeeK
 - https://www.youtube.com/@HACKINFO
+- https://www.youtube.com/c/wakedxy
 - https://tryhackme.com/
 - https://www.hackthebox.com/
 - https://www.justhacking.com/

@@ -1,3 +1,7 @@
+# Avant-propos 
+
+Nous vous recommandons de ne pas utiliser d'IA pour faire les exercices car vous êtes en phase d'apprentissage.
+
 # Introduction
 
 Dans ce chapitre, nous allons explorer la **planification des tâches** sous Linux, un concept essentiel pour automatiser des processus répétitifs et optimiser la gestion d’un système. Que ce soit pour des sauvegardes, des nettoyages de fichiers temporaires ou des vérifications périodiques, la planification des tâches est une compétence clé pour tout administrateur système ou utilisateur Linux. Nous nous concentrerons sur **cron**, l’outil de planification le plus répandu et puissant sous Linux. Préparez-vous à devenir un maître de l’automatisation chère padawan !
@@ -9,6 +13,9 @@ Dans ce chapitre, nous allons explorer la **planification des tâches** sous Lin
 Toujours la même histoire. 😉
 
 ---
+
+<br>
+<br>
 
 # Qu'est-ce que la planification des tâches ?
 
@@ -44,8 +51,7 @@ Le fichier **crontab** est composé de lignes, chacune représentant une tâche 
 +­­­­­­­­­­ minute 0­59
 ```
 
-**Note**: **/dev/null** est un fichier qui ne pointe sur rien, la sortie de commande est donc envoyée nulle part. Cela permet de se débarrasser de la sortie pour ne pas la loguer - d'autant que sans
-redirection, la sortie standard est envoyée par mail à root. Cela dit, vous pouvez rediriger la sortie dans un fichier de log pour vous tenir informer des erreurs qui peuvent survenir lors d'une tâche planifiée ou utiliser la commande chronic.
+**Note**: **/dev/null** est un fichier qui ne pointe sur rien, la sortie de commande est donc envoyée nulle part. Cela permet de se débarrasser de la sortie pour ne pas la loguer - d'autant que sans redirection, la sortie standard est envoyée par mail à root. Cela dit, vous pouvez rediriger la sortie dans un fichier de log pour vous tenir informer des erreurs qui peuvent survenir lors d'une tâche planifiée ou utiliser la commande chronic.
 
 Chaque champ peut contenir :
 - Une valeur spécifique (par ex., `15` pour 15 minutes).  
@@ -159,9 +165,9 @@ Pour éviter les erreurs courantes et optimiser tes tâches cron :
     ```
     
 
- - **Teste tes scripts avant** : Exécute manuellement ton script pour t’assurer qu’il fonctionne correctement avant de l’ajouter au crontab.
+- **Teste tes scripts avant** : Exécute manuellement ton script pour t’assurer qu’il fonctionne correctement avant de l’ajouter au crontab.
 
- - **Vérifie les permissions** : Assure-toi que les scripts sont exécutables (chmod +x script.sh) et que l’utilisateur cron a les permissions nécessaires.
+- **Vérifie les permissions** : Assure-toi que les scripts sont exécutables (chmod +x script.sh) et que l’utilisateur cron a les permissions nécessaires.
 
 - **Utilise des logs** : Enregistre les résultats de tes tâches dans des fichiers journaux pour faciliter le débogage.
 
@@ -190,7 +196,7 @@ Lorsque tu programmes une tâche à intervalles réguliers  (par exemple via cro
 Cela peut causer des problèmes : duplication de traitement, surcharge du système, erreurs inattendues...
 
 Imaginons que tu as une tâche cron qui tourne toutes les 5 minutes , mais parfois elle prend plus de 5 minutes  pour finir.
-Résultat : deux instances du même script tournent en même temps → conflit possible ! 
+**Résultat:** deux instances du même script tournent en même temps. Cela peut donc créer un conflit ! 
 
 **Question:** Comment éviter cela ?
 
@@ -244,6 +250,7 @@ rm -f $LOCKFILE
 
 ```
 
+<br>
 
 # Entraînement ⚔️
 
@@ -262,6 +269,15 @@ Planifier une tâche quotidienne pour nettoyer les fichiers temporaires et gére
 ## Exercice 3 : Tâche avancée avec dépendances
 
 Configurer deux tâches cron dépendantes pour une sauvegarde et une vérification.
+
+<br>
+<br>
+
+---
+---
+
+**C'est ainsi que l'aventure prend fin !<br>
+Merci d'avoir suivi ce cours. J'espère qu'il vous a aidé à mieux appréhender l'univers de Linux.🙂​**
 
 ---
 ---

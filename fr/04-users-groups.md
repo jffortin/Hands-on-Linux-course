@@ -1,3 +1,7 @@
+# Avant-propos
+
+Nous vous recommandons de ne pas utiliser d'IA pour faire les exercices car vous êtes en phase d'apprentissage.
+
 # Introduction
 
 Linux est un vrai système multi-utilisateurs ! Plusieurs utilisateurs peuvent se connecter et exécuter des tâches en même temps. Il a aussi un mode mono-utilisateur (« single user ») géré par le noyau, utilisé uniquement à des fins de maintenance. Les utilisateurs ont généralement :
@@ -7,21 +11,21 @@ Linux est un vrai système multi-utilisateurs ! Plusieurs utilisateurs peuvent s
 * un dossier personnel, des fichiers, des données
 * des processus en cours d'exécution
 
-## Avant-propos
 
-Nous vous recommandons de ne pas utiliser d'IA pour faire les exercices car vous êtes en phase d'apprentissage.
-
-## Prérequis (La répétition est pédagogique XD)
+## Prérequis (La répétition est pédagogique 😜)
 
 * Avoir une machine virtuelle ou un PC ou un environnement sous Linux (Ubuntu idéalement)
-* Être résilient XD
+* Être résilient 
 
 **Info:** Si vous n'avez pas de d'environnement Linux à votre disposition, vous pouvez vous inscrire sur https://killercoda.com et vous rendre ici https://killercoda.com/playgrounds/scenario/ubuntu pour avoir accès à une machine virtuelle sous Ubuntu 24.04 (sans interface graphique bien sûr !!) pendant 1 heure renouvelable gratuitement.
 
 Vous aurez donc cette vue:
 
-![](./pictures/killerkoda_vm.png)
+![](https://raw.githubusercontent.com/N0vachr0n0/Hands-on-Linux-course/refs/heads/main/fr/pictures/killerkoda_vm.png)
 
+
+<br>
+<br>
 
 # Gestion des utilisateurs
 
@@ -39,9 +43,9 @@ Vous aurez donc cette vue:
 
 Ci-dessous un exemple de retour similaire que vous aurez:
 
-![](./pictures/user_intro1_cmd.png)
+![](https://raw.githubusercontent.com/N0vachr0n0/Hands-on-Linux-course/refs/heads/main/fr/pictures/user_intro1_cmd.png)
 <br>
-![](./pictures/user_intro2_cmd.png)
+![](https://raw.githubusercontent.com/N0vachr0n0/Hands-on-Linux-course/refs/heads/main/fr/pictures/user_intro2_cmd.png)
 
 
 Un peu d'explication rapide.
@@ -228,12 +232,12 @@ sudo usermod [options] nom_utilisateur
 ```bash
 sudo usermod -aG sudo alice
 ```
-➡️ Ajoute `alice` au groupe `sudo`.
+Cela ajoute `alice` au groupe `sudo`.
 
 ```bash
 sudo usermod -d /nouveau/chemin alice
 ```
-➡️ Change le dossier personnel de `alice`.
+Cela change le dossier personnel de `alice`.
 
 ---
 
@@ -243,13 +247,14 @@ sudo usermod -d /nouveau/chemin alice
 sudo passwd nom_utilisateur
 ```
 
-- Permet de **définir ou modifier** le mot de passe d’un utilisateur.
+Cela permet de **définir ou modifier** le mot de passe d’un utilisateur.
+
 
 #### Exemple :
 ```bash
 sudo passwd alice
 ```
-➡️ Invite à saisir un nouveau mot de passe pour `alice`.
+Cela invite à saisir un nouveau mot de passe pour `alice`.
 
 ---
 
@@ -278,14 +283,23 @@ sudo userdel -r alice
 | Commande   | Description |
 |------------|-------------|
 | `useradd`  | **Commande de bas niveau** : simple, mais nécessite plus d’options. |
-| `adduser`  | **Script interactif** : guide étape par étape (mot de passe, info, etc.) |
-|            | Crée automatiquement le dossier personnel, le shell, etc. |
+| `adduser`  | **Script interactif** : guide étape par étape pour créer un utilisateur (mot de passe, info, dossier personnel, le shell etc.). |
+
+
 
 #### Exemple :
 ```bash
 sudo adduser bob
 ```
-➡️ Démarre un assistant pour créer un utilisateur complet.
+Cela démarre un assistant pour créer un utilisateur complet.
+
+
+<br>
+
+**​⚠️ INFO EN PLUS:** <br>
+Il peut arriver qu'il y ait un bémol (lors de l'utilisation de `useradd` généralement) et votre utilisateur se retrouve sans répertoire personnel. Vous pouvez donc rattraper ce bémol avec la commande `mkhomedir_helper`. (ex. `mkhomedir_helper myuserbob`).
+
+<br>
 
 ---
 
@@ -298,6 +312,7 @@ sudo adduser bob
 | `usermod`    | Modifier un utilisateur existant  |
 | `passwd`     | Modifier le mot de passe          |
 | `userdel`    | Supprimer un utilisateur          |
+| `mkhomedir_helper` | Créer le répertoire personnel d'un utilisateur |
 
 
 ### Commandes pour changer d’utilisateur
@@ -308,6 +323,8 @@ sudo adduser bob
   - Options utiles : `sudo -u utilisateur commande` (exécute la commande en tant qu’un utilisateur spécifique).
 - **whoami** : Affiche l’utilisateur actuel (ex. `whoami` renvoie le nom de l’utilisateur actif, utile pour vérifier après un changement).
 
+
+<br>
 <br>
 
 ## Exercice ⚔️
@@ -326,6 +343,9 @@ chmod +x USER_EXO_1.sh
 # On l'exécute pour démarrer le challenge
 ./USER_EXO_1.sh
 ```
+
+<br>
+<br>
 
 # Gestion des Groupes
 

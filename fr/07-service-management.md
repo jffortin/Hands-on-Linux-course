@@ -1,14 +1,17 @@
+# Avant-propos
+
+Nous vous recommandons de ne pas utiliser d'IA pour faire les exercices car vous êtes en phase d'apprentissage.
+
 # Introduction
 
 Dans cette partie, nous aborderons la gestion des services sur Linux. 
 
-## Avant-propos (La répétition est pédagogique XD)
-
-Nous vous recommandons de ne pas utiliser d'IA pour faire les exercices car vous êtes en phase d'apprentissage.
-
 ## Prérequis 
 
 Toujours la même histoire. 😉
+
+<br>
+<br>
 
 # Débutons l'exploration
 
@@ -23,8 +26,7 @@ Généralement, on distingue deux grands types de services :
 
 Ce sont les services internes nécessaires au démarrage du système.  
 Ils s’occupent de tâches matérielles importantes et initialisent les composants indispensables au fonctionnement du système d’exploitation.  
-Ils sont comparables au **moteur et à la transmission d’une voiture** : ils se lancent dès que vous tournez la clé de contact et sont indispensables pour que la voiture avance.  
-Sans eux, le système ne pourrait pas fonctionner.
+Ils sont comparables au **moteur et à la transmission d’une voiture** : ils se lancent dès que vous tournez la clé de contact et sont indispensables pour que la voiture avance. Sans eux, le système ne pourrait pas fonctionner.
 
 
 ### Services installés par l’utilisateur
@@ -36,11 +38,11 @@ Ce sont comme les options d’une voiture (climatisation, GPS...): non essentiel
 
 ### TLDR (Parlons concrètement d'un service)
 
-Une application n’a pas toujours besoin d’un service pour fonctionner. Cependant, un service joue un rôle essentiel dans la gestion du cycle de vie d’une application : il permet notamment de la démarrer automatiquement au lancement du système, ou de la contrôler facilement (démarrer, arrêter, redémarrer) selon les besoins. 
+Une application n’a pas toujours besoin d’un service pour fonctionner. Cependant, un service joue un rôle essentiel dans la gestion du cycle de vie d’une application. Il permet notamment de la démarrer automatiquement au lancement du système, ou de la contrôler facilement (démarrer, arrêter, redémarrer) selon les besoins. 
 
-Prenons l’exemple d’OpenSSH, qui permet d’accéder à une machine à distance via le protocole SSH. Sans service, il faudrait exécuter manuellement une commande assez complexe chaque fois que l’on souhaite activer cette fonctionnalité. De plus, si la machine redémarre, si le service est interrompu accidentellement ou si vous modifiez le fichier de configuration, il faudrait retaper cette commande à chaque fois. 
+Prenons l’exemple d’OpenSSH, qui permet d’accéder à une machine à distance via le protocole SSH. Sans ce service, il faudrait exécuter manuellement une commande assez complexe chaque fois que l’on souhaite activer cette fonctionnalité. De plus, si la machine redémarre ou si le service est interrompu accidentellement ou si vous modifiez le fichier de configuration, il faudrait retaper cette commande à chaque fois. 
 
-Cela rend la gestion de l’application fastidieuse et peu fiable. C’est là qu’intervient un service, qui simplifie toute cette gestion. Dans le cas d’OpenSSH, ce service s’appelle **sshd**. Il permet non seulement de lancer automatiquement OpenSSH au démarrage, mais aussi de gérer son fonctionnement simplement avec des commandes comme **systemctl start sshd**, **systemctl stop sshd** ou **systemctl restart sshd**. 
+Cela rend la gestion de l’application fastidieuse et peu fiable. C’est là qu’intervient un **service**, qui simplifie toute cette gestion. Dans le cas d’OpenSSH, ce service s’appelle **sshd**. Il permet non seulement de lancer automatiquement OpenSSH au démarrage, mais aussi de gérer son fonctionnement simplement avec des commandes comme **systemctl start sshd**, **systemctl stop sshd** ou **systemctl restart sshd**. 
      
 
 ### Comment reconnaître un démon (un service) ?
@@ -117,6 +119,8 @@ Un processus peut également avoir un **PPID** (Parent Process ID), ce qui signi
 
 Pour rappel, un log (ou journal de bord) est un enregistrement d'événements générés par une application, un service ou le système.
 
+<br>
+<br>
 
 # Entraînement ⚔️
 
@@ -130,13 +134,13 @@ Cet exercice consistera à installer le logiciel **Apache HTTP Server** qui perm
 4. Vérifiez l'état du service apache2
 5. Accédez à la page web par défaut hébergée par votre serveur web (Ouvrez votre navigateur et saisir http://127.0.0.1 | Si vous n'avez pas d'interface graphique, effectuez un curl sur http://127.0.0.1 )
 
-Exemples de retour:
+**Exemples de retour:**
 
-![](./pictures/apache_webpage.png)
+![](https://raw.githubusercontent.com/N0vachr0n0/Hands-on-Linux-course/refs/heads/main/fr/pictures/apache_webpage.png)
 
-![](./pictures/apache_webpage_curl_1.png)
+![](https://raw.githubusercontent.com/N0vachr0n0/Hands-on-Linux-course/refs/heads/main/fr/pictures/apache_webpage_curl_1.png)
 
-![](./pictures/apache_webpage_curl_2.png)
+![](https://raw.githubusercontent.com/N0vachr0n0/Hands-on-Linux-course/refs/heads/main/fr/pictures/apache_webpage_curl_2.png)
 
 6. Stoppez le service apache2 et actualisez la page web ou relancez le curl
 7. Faites en sorte que le service apache2 démarre de manière automatique au lancement de votre machine. Vérifiez en redémarrant votre machine.

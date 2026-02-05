@@ -1,23 +1,25 @@
+# Avant-propos (La répétition est pédagogique)
+
+Nous vous recommandons de ne pas utiliser d'IA pour faire les exercices car vous êtes en phase d'apprentissage.
+
 # Introduction
 
 Vous aurez souvent besoin d’installer des logiciels qui ne sont pas fournis avec votre distribution ou supprimer les logiciels indésirables afin qu’ils ne prennent pas de l’espace disque dur. Dans cette partie, nous aborderons la gestion des paquets de logiciels ou applications sur Linux. 
-
-## Avant-propos (La répétition est pédagogique XD)
-
-Nous vous recommandons de ne pas utiliser d'IA pour faire les exercices car vous êtes en phase d'apprentissage.
 
 ## Prérequis 
 
 Toujours la même histoire. 😉
 
+<br>
+<br>
+
 # Les gestionnaires de paquets (packages) sous linux
 
-Tout d'abord un paquet est une archive qui contient un ensemble de fichiers et de répertoires à déployer sur le système d'exploitation pour permettre le bon fonctionnement d'un logiciel à installer. Un paquet ou package peut nécessiter la présence d'autres packages pour
-fonctionner. On parle alors de dépendances. 
+Tout d'abord un paquet est une archive qui contient un ensemble de fichiers et de répertoires à déployer sur le système d'exploitation pour permettre le bon fonctionnement d'un logiciel à installer. Un paquet ou package peut nécessiter la présence d'autres packages pour fonctionner. On parle alors de dépendances. 
 
 ## Les dépôts (repo or repository) linux
 
-Un dépôt Linux  (en anglais repository ), c’est un endroit (souvent sur Internet) où sont stockés des packages logiciels , prêts à être téléchargés et installés. Nous pouvons aussi voir les dépôts comme des supermarchés ou des réserves bien organisées  où nous trouvons ces paquets. XD
+Un dépôt Linux  (en anglais repository ), c’est un endroit (souvent sur Internet) où sont stockés des packages logiciels , prêts à être téléchargés et installés. Nous pouvons aussi voir les dépôts comme des supermarchés ou des réserves bien organisées où nous trouvons ces paquets.
 
 Sur linux, il existe plusieurs types de dépôts:
 
@@ -61,7 +63,7 @@ L'installation d'un package passe par un gestionnaire / outil. Ci-dessous un tab
 
 **Info**:
 
-⚠️ dpkg ne gère pas automatiquement les dépendances. En cas d’erreur, utilisez apt --fix-broken install.
+⚠️ "dpkg" ne gère pas automatiquement les dépendances. En cas d’erreur, utilisez "apt --fix-broken install".
 
 
 ## Exploration du gestionnaire APT (Advanced Package Tool)
@@ -91,7 +93,17 @@ Désolé pour ceux qui ne sont pas sur une distribution basée sur debian 😝.
 
 L'installation d'un logiciel sur linux se fait principalement via un gestionnaire de paquet mais il est aussi possible d'installer des logiciels manuellement via des dépôts GitHub ou d’autres sources et méthodes.
 
+<br>
+<br>
+
 # Entraînement ⚔️
+
+## Exercice de recherche 
+
+1. Chercher pourquoi il y a des dépôts officiels et non officiels
+2. Chercher les différences entre un dépôts free et non-free
+3. Chercher les différences entre les gestionnaires de paquets flatpak et snap
+4. Chercher les différences entre les gestionnaires de paquets snap et apt
 
 ## Exercice 1
 
@@ -99,7 +111,7 @@ L'installation d'un logiciel sur linux se fait principalement via un gestionnair
 2. Installer l'application **cowsay** et afficher le texte "subarashi" avec cowsay
 3. Installer l'application **atop** et visualiser vos métriques système.
 
-Test : Tapez figlet -v, cowsay -h et atop -V pour vérifier l’installation.
+**Test:** Tapez `figlet -v`, `cowsay -h` et `atop -V` pour vérifier l’installation.
 
 ## Exercice 2 (Deep dive)
 
@@ -107,7 +119,7 @@ Il est temps de passer aux choses sérieuses !!! <br>
 Ce challenge consiste à rechercher le fichier flag.zip et de le compresser afin d'obtenir le flag (chaîne de caractères spéciale).
 Avant de démarrer le challenge, il faudra mettre en place l'environnement comme suit:
 
-**Info:**Prêtez attention à votre prompt.
+**Info:** Prêtez attention à votre prompt.
 
 ```bash
 # Installation du prérequis: l'app docker
@@ -125,7 +137,7 @@ sudo docker exec -it ctf-sysadmin bash # Permet de rentrer dans le conteneur Doc
 
 A ce stade vous devez être dans le conteneur docker et non dans le terminal rattaché à votre OS comme illustré ci-dessous.
 
-![](./pictures/prompt_docker_chall.png)
+![](https://raw.githubusercontent.com/N0vachr0n0/Hands-on-Linux-course/refs/heads/main/fr/pictures/prompt_docker_chall.png)
 
 <br>
 
@@ -143,6 +155,20 @@ sudo docker rm -f ctf-sysadmin # Suppression du conteneur
 sudo docker run -dit --name ctf-sysadmin fs0ci3ty/adminsys_basic-ctf 
 sudo docker exec -it ctf-sysadmin bash
 ```
+---
+
+<br>
+
+**Vous en voulez plus sur Docker ? Rdv ici => https://openclassrooms.com/fr/courses/8431896-optimisez-votre-deploiement-en-creant-des-conteneurs-avec-docker**
+
+**Je vous invite aussi à faire une recherche sur "docker rootless" et "podman vs docker"**
+
+**Dernier Point ⚠️ :** <br> 
+Si vous utilisez Docker sur votre VPS ou serveur privé accessible sur internet, nous vous invitons à faire attention aux ports mis en écoute par Docker car il crée une règle qui contourne les règles du pare-feux. Il s'agit d'un comportement normal dans Docker. Nous vous invitons donc à lire ces articles:
+- https://docs.docker.com/engine/network/packet-filtering-firewalls/
+- https://forums.docker.com/t/need-more-clarifications-for-firewall-prerequisites/142657
+- https://medium.com/@akhshyganesh/docker-vs-your-firewall-the-silent-port-sneak-6e4bad366a5e
+- https://rithwik.hashnode.dev/how-docker-can-be-sneaky-around-your-ufw-firewall
 
 ---
 ---

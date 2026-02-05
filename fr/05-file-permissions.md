@@ -1,14 +1,17 @@
+# Avant-propos (La répétition est pédagogique)
+
+Nous vous recommandons de ne pas utiliser d'IA pour faire les exercices car vous êtes en phase d'apprentissage.
+
 # Introduction
 
 Dans cette partie nous aborderons la gestion des fichiers sous Linux. Plus précisément, nous parlerons des droits et de la gestion des accès sur les fichiers.
 
-## Avant-propos (La répétition est pédagogique XD)
-
-Nous vous recommandons de ne pas utiliser d'IA pour faire les exercices car vous êtes en phase d'apprentissage.
-
 ## Prérequis 
 
 Toujours la même histoire. 😉
+
+<br>
+<br>
 
 # La Gestion des fichiers
 
@@ -296,8 +299,11 @@ Ces deux bits sont principalement utilisés pour la gestion des permissions temp
 
 **Point important:** Les systèmes Linux modernes n'autorisent pas le SETUID et SETGID sur les scripts shell (comme les .sh) pour des raisons de sécurité. Le script va donc s’exécuter avec les privilèges de l’utilisateur courant, pas ceux du propriétaire (root), même si le bit SETUID est actif. Voir la capture ci-dessous.
 
-![](./pictures/setuid_test.png)
+![](https://raw.githubusercontent.com/N0vachr0n0/Hands-on-Linux-course/refs/heads/main/fr/pictures/setuid_test.png)
 
+
+<br>
+<br>
 
 # Entraînement ⚔️
 ## Exercice 1 

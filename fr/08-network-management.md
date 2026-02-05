@@ -1,3 +1,7 @@
+# Avant-propos
+
+Nous vous recommandons de ne pas utiliser d'IA pour faire les exercices car vous êtes en phase d'apprentissage.
+
 # Introduction
 
 Dans cette partie, nous aborderons les points suivants :
@@ -7,6 +11,9 @@ Dans cette partie, nous aborderons les points suivants :
 ## Prérequis 
 
 Toujours la même histoire. 😉
+
+<br>
+<br>
 
 # Le réseau informatique (brièvement)
 
@@ -486,6 +493,9 @@ Les ports sont des numéros qui identifient les services qui écoutent sur une m
 
 # Quelques outils de dépannage Réseau sous Linux
 
+**INFO:** <br>
+Les outils listés ci-dessous sont présents dans le paquet "net-tools". Il faudra donc l'installer au cas où vous n'en avez pas.🙂
+
 ## Ping
 
 - **Qu'est-ce que Ping ?** : Ping teste la connectivité et mesure le temps de réponse.
@@ -566,7 +576,8 @@ Les ports sont des numéros qui identifient les services qui écoutent sur une m
  # Tester la connectivité et tracer le chemin vers Google
  mtr google.com
  ```
-
+<br>
+<br>
 
 # Entraînement ⚔️
 

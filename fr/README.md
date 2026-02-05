@@ -1,9 +1,5 @@
 
 ---
-
-## 📄 Contenu de `fr/README.md`
-
-
 # 📚 Cours Linux - Version française 🇫🇷
 
 Bienvenue dans le **Hands-on Linux Course** en version française.
@@ -42,4 +38,4 @@ Ce cours vous accompagne pas à pas dans l’apprentissage de Linux à travers d
 
 ## 🔁 Version anglaise
 
-Pour suivre le cours en anglais : [English version here](../eng/README.md)
+To take the course in English : [English version here](../eng/README.md)

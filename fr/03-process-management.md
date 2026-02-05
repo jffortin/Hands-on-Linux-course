@@ -1,22 +1,25 @@
+# Avant-propos
+
+Nous vous recommandons de ne pas utiliser d'IA pour faire les exercices car vous êtes en phase d'apprentissage.
+
 # Introduction
 
 Dans un système Linux, la gestion des processus est un aspect fondamental de l'administration du système et du fonctionnement des applications. Un processus est simplement un programme en cours d'exécution. Linux, comme tous les systèmes d'exploitation modernes, utilise des processus pour exécuter des tâches et organiser le travail.
 
-## Avant-propos
-
-Nous vous recommandons de ne pas utiliser d'IA pour faire les exercices car vous êtes en phase d'apprentissage.
-
-## Prérequis (La répétition est pédagogique XD)
+## Prérequis 
 
 * Avoir une machine virtuelle ou un PC ou un environnement sous Linux (Ubuntu idéalement)
-* Être résilient XD
+* Être résilient 😜
 
 **Info:** Si vous n'avez pas de d'environnement Linux à votre dispositon, vous pouvez vous inscrire sur https://killercoda.com et vous rendre ici https://killercoda.com/playgrounds/scenario/ubuntu pour avoir accès à une machine virtuelle sous Ubuntu 24.04 (sans interface graphique bien sûr !!) pendant 1 heure renouvellable gratuitement.
 
 Vous aurez donc cette vue:
 
-![](./pictures/killerkoda_vm.png)
+![](https://raw.githubusercontent.com/N0vachr0n0/Hands-on-Linux-course/refs/heads/main/fr/pictures/killerkoda_vm.png)
 
+
+<br>
+<br>
 
 # Généralités 
 
@@ -139,6 +142,9 @@ La commande **pkill** enverra le signal indiqué (par défaut **SIGTERM**) à ch
     ```bash
     pkill tomcat
     ```
+    
+<br>
+<br>
 
 # Entraînement ⚔️
 

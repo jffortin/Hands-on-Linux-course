@@ -1,111 +1,120 @@
+# Foreword
+
+- La version française est ici: https://github.com/N0vachr0n0/Hands-on-Linux-course/tree/main/fr
+- We recommend that you do not use AI to do the exercises as you are in the learning phase.
+
+<br>
+<br>
+
 # Introduction
 
-Future hacker? Future Linux system administrator? Future DevOps engineer? Just curious or passionate about computers? Let’s explore together the wonderful universe of Linux — that famous open-source operating system everyone seems to fear.
-
-## Foreword
-
-We recommend **not using AI to complete the exercises**, as you are currently in a learning phase.
-
-# 1. A Brief History of Linux
-
-Linux was born in 1991, created by Linus Torvalds, a Finnish student inspired by UNIX — a powerful and modular operating system developed in the 1970s by Ken Thompson, Dennis Ritchie, and others at Bell Labs. UNIX was known for its stability and portability, but its code wasn’t free. Torvalds aimed to recreate a similar system, free and open, by releasing the Linux kernel, which he shared with the community.
-
-By combining it with the tools from the GNU project (started by Richard Stallman in the 1980s to build a free UNIX-like operating system), Linux became a complete OS, often called GNU/Linux. It inherited UNIX's multi-user and multitasking concepts, while evolving through open source. Today, Linux dominates the server, supercomputer, and smartphone markets (through Android), often surpassing UNIX in popularity.
-
-Here’s a quick recap of key takeaways:
-
-- **UNIX as inspiration**: Created in the 1970s at Bell Labs, UNIX introduced key concepts (stability, modularity, multi-user) that influenced Linux, although UNIX remained proprietary.
-
-- **Linux, a free alternative**: In 1991, Linus Torvalds developed the Linux kernel, inspired by UNIX, and made it open source — launching a global collaborative project.
-
-- **The GNU Project’s role**: Started by Richard Stallman in the 1980s, GNU provided tools that, combined with the Linux kernel, resulted in a fully free UNIX-like system.
-
-- **The power of open source**: The global community helped evolve Linux, making it adaptable and dominant in servers, supercomputers, and smartphones (via Android).
-
-- **Legacy and impact**: Linux carries on the UNIX spirit while surpassing it in accessibility and popularity, becoming a cornerstone of modern computing.
+Future hacker? Future Linux system administrator? Future DevOps? Just curious? Passionate about computers? Let's explore the wonderful world of Linux together. Linux, the famous open-source operating system that everyone fears.
 
 
-## Small Exercise
+# 1. History of Linux
+
+Linux was born in 1991, created by Linus Torvalds, a Finnish student inspired by UNIX, a powerful and modular operating system developed in the 1970s by Ken Thompson, Dennis Ritchie, and others at Bell Labs. UNIX was renowned for its stability and portability, but its code was not free. Torvalds wanted to recreate a similar system that was free and open, so he published the Linux kernel and shared it with the community.
+By combining it with tools from the GNU project (launched by Richard Stallman in the 1980s to create a free operating system similar to UNIX), Linux became a complete operating system, often referred to as GNU/Linux. It inherited concepts such as multi-user management and multitasking from its UNIX roots, while evolving thanks to open source. Today, Linux dominates the market for servers, supercomputers, and even smartphones (via Android), often surpassing UNIX in popularity.
+
+Let's recap the key points to remember:
+
+- **UNIX as inspiration**: Created in the 1970s at Bell Labs, UNIX introduced key concepts (stability, modularity, multi-user) that influenced Linux, although it remained proprietary.
+
+- **Linux, a free alternative**: In 1991, Linus Torvalds developed the Linux kernel, inspired by UNIX, and made it open source, marking the beginning of a global collaborative project.
+
+- **Role of the GNU project**: Initiated by Richard Stallman in the 1980s, GNU provides the tools that, combined with the Linux kernel, create a completely free UNIX-like system.
+
+- **Power of open source**: The global community is evolving Linux, making it adaptable and dominant in servers, supercomputers, and smartphones (Android).
+
+- **Legacy and impact**: Linux retains the spirit of UNIX while surpassing it in accessibility and popularity, becoming a pillar of modern computing.
+
+
+## Short Exercise
 
 * Research the differences between Unix, Linux, BSD, and GNU.
 * What is open source?
 * What is free software?
 * What is proprietary software?
-* What's the difference between open source and free software?
-
-# 2. Linux Distributions
-
-Now that you know what Linux is, you may be wondering how to install it. Installing Linux usually happens in three main steps:
-
-1. Choosing the distribution (Debian? Ubuntu? Kali Linux? Linux Mint? Arch Linux?)
-2. Choosing the installation method (main OS? Dual boot? Virtual machine? Cloud?)
-3. Installation XD
+* What is the difference between open source and free software?
 
 
-## Let’s talk about Linux distributions
+# 2. Linux distributions 
 
-Linux is installed via a **distribution**. A Linux distribution (or "distro") is a complete, ready-to-use version of the Linux OS, built around the Linux kernel. It includes not just the kernel, but also a set of software, tools, libraries, and often a graphical user interface (GUI) — all tailored to specific needs. Each distribution has its own characteristics.
+Now you know what Linux is. You may be wondering how to install it. Installing Linux involves three main steps.
 
-In the Linux world, we speak of **parent distributions**. A parent distribution is a Linux distro that serves as a base or starting point for other derived distributions. These “parents” are often stable, well-established, and provide a technical foundation upon which other projects build their own versions with custom goals or enhancements.
+1. Choosing a distribution (Debian? Ubuntu? Kali Linux? Linux Mint? Arch Linux, etc.)
+2. Choosing an installation method (main OS? Dual boot? Virtual machine? Cloud?)
+3. Installation 🙃​
+
+
+## Let's talk about Linux distributions 
+
+Linux is installed via a **distribution**. A Linux distribution (or “distro”) is a complete, ready-to-use version of the Linux operating system, built around the Linux kernel. It includes not only the kernel, but also a set of software, tools, libraries, and often a user interface (such as a desktop environment), all tailored to specific needs. It should also be noted that each distribution has its own particularities.
+
+In the Linux world, we talk about **parent distributions**. A parent distribution is a Linux distribution that serves as the basis or starting point for other derivative distributions. These “parents” are often stable, well-established, and provide a technical foundation on which other projects build their own versions, adding customizations or specific objectives.
 
 
 ## Examples of parent distributions
 
-* **Debian**: One of the most influential, known for its stability. It’s the base for many other distros like Ubuntu, Linux Mint, and Kali Linux.
-* **Red Hat**: Mainly used in enterprises. It gave rise to Fedora (community version), CentOS (before it transitioned to CentOS Stream), and Rocky Linux.
-* **Arch Linux**: Minimal and flexible, it inspired derivatives like Manjaro, which focuses on ease of use.
+* **Debian**: One of the most influential, known for its stability. It is the origin of many distributions such as Ubuntu, Linux Mint, and Kali Linux.
+* **Red Hat**: Mainly used in businesses, it gave rise to Fedora (community version), CentOS (before its transition to CentOS Stream), and Rocky Linux.
+* **Arch Linux**: Minimalist and flexible, it inspires derivatives such as Manjaro, which focuses on ease of use.
 
-**Note:** Some distributions come with a default user interface, others do not (you’ll land directly in a command-line interface on boot).
+**NB:** Some distributions have a default user interface, others do not (when the system starts up, you land directly on a command line interface).
 
 
-A Linux distribution (Ubuntu 24.04) with a user interface might look like this:
+A Linux distribution (Ubuntu 24.04) with a user interface may look like this:
 
 ![](./pictures/Ubuntu_24.png)
 
-A Linux distribution without a user interface might look like this:
+A Linux distribution without a user interface may look like this:
 
 ![](./pictures/Linux_NOGUI.png)
 
-**Note:** Linux is generally installed on servers **without a GUI**. Management is done **via the command line only**.
+
+**Info:** In general, Linux is installed on servers without a user interface. Management is therefore done via the command line only.
 
 
-## Major differences between distributions
+## The major differences between distributions
 
-We’ll compare the distributions across three criteria: **package management and updates**, **philosophy and target audience**, and **ease of use**.
+We will compare distributions according to three criteria: **package and update management**, **philosophy and target audience**, and **ease of use**.
 
-1. **Package management and updates**
+1. **Package and update management**
 
-   * **Debian**: Uses the `apt` manager (`.deb` format). Focuses on stability with less frequent but thoroughly tested updates. “Stable” versions may come with older software.
-   * **Red Hat**: Uses `yum` or `dnf` (`.rpm` format). Business-oriented, with long cycles (RHEL) for stability. Fedora is more up-to-date and experimental.
-   * **Arch Linux**: Uses `pacman`. Follows a “rolling release” model: continuous updates, cutting-edge, but less stable if poorly maintained.
+   * **Debian**: Uses the `apt` manager (`.deb` format). Prioritizes stability with less frequent but rigorously tested updates. “Stable” versions may include older software.
+   * **Red Hat**: Uses `yum` or `dnf` (`.rpm` format). Enterprise-oriented, with long cycles (RHEL) to ensure stability. Fedora, its derivative, is more up-to-date and experimental.
+   * **Arch Linux**: Uses `pacman`. “Rolling release” model: continuous updates, always cutting edge, but less stable if poorly managed.
 
 2. **Philosophy and target audience**
 
-   * **Debian**: Versatile, focused on software freedom (strict open source), suitable for servers, workstations, or technical users.
-   * **Red Hat**: Designed for enterprises (RHEL is paid), with commercial support. Fedora targets innovators, while Rocky Linux offers a free alternative to RHEL.
-   * **Arch Linux**: Aimed at advanced users seeking full control, with no default configuration imposed.
+* **Debian**: Versatile, focused on software freedom (strict open source), suitable for servers, workstations, or technical users.
+   * **Red Hat**: Designed for businesses (RHEL is paid), with commercial support. Fedora targets innovators, and Rocky Linux targets those looking for a free alternative to RHEL. For reference, RHEL stands for Red Hat Enterprise Linux.
+   * **Arch Linux**: Intended for advanced users who want total control, without imposed default configurations.
 
 3. **Ease of use**
 
-   * **Debian**: Moderately accessible. Its derivatives like Ubuntu simplify installation and offer a beginner-friendly experience.
-   * **Red Hat**: RHEL is complex and aimed at professionals. Fedora is more user-friendly, while Rocky Linux aims to provide a simple solution for former CentOS users.
-   * **Arch Linux**: No native ease-of-use (manual installation). Manjaro, its derivative, offers a simplified and user-friendly interface.
+* **Debian**: Moderately accessible. Its derivatives, such as Ubuntu, simplify installation and the experience for beginners.
+* **Red Hat**: RHEL is complex and geared toward professionals. Fedora is more accessible, while Rocky Linux seeks to offer a simple solution for former CentOS users.
+   * **Arch Linux**: No native ease of use (manual installation). Manjaro, its derivative, provides a user-friendly and simplified interface.
 
-> 💡 A secondary criterion could be **distribution specificity**: some are focused on security (hacking/pentesting), others on gaming, or built for general use or low-resource machines.
+> 💡 A secondary criterion that could be added is the **specificity of the distribution**: some are security-oriented (hacking/pentesting), others are geared towards gaming, or designed for everyday use (generalists) or adapted to less powerful machines (lightweight).
 
+> With freedom at the heart of Linux, each distribution has its own objectives, philosophies, history, and package manager.
+
+<br>
+<br>
 
 # Exercise ⚔️
 
-* Visit https://distrowatch.com/
-* Find two Linux distributions based on different criteria (hacking, gaming, general-purpose, lightweight)
+* Take a look at https://distrowatch.com/
+* Find two Linux distributions based on different characteristics (hacking, gaming, general-purpose, and lightweight)
 * Research Tails OS and Qubes OS
 * What is an LTS version?
 * What are the LTS versions of Ubuntu?
-* What is dual booting? What are its pros and cons?
-* What is a hypervisor? What is virtualization? What are virtualization tools for PC?
-* Research cloud service providers
-* Install a Linux distribution of your choice in a virtual machine and explore it XD
-
+* What is dual boot? What are its advantages and disadvantages?
+* What is a hypervisor? What is virtualization? What virtualization software is available for PCs?
+* Research cloud providers
+* Install a Linux distribution of your choice in a virtual machine to explore it 🙂​
 
 ---
 ---
@@ -113,7 +122,7 @@ We’ll compare the distributions across three criteria: **package management an
 ## Feedback
 
 > ENG: Please give us your feedback about this chapter.
-
-> FR: Faites-nous part de votre avis sur ce chapitre.
+<>
+> FR: Let us know what you think about this chapter.
 
 > 👉🏾 https://forms.gle/1oYNEGehhKUCMcoP7 

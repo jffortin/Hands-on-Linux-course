@@ -1,10 +1,14 @@
+# Avant-propos
+
+- The english version is here: https://github.com/N0vachr0n0/Hands-on-Linux-course/tree/main/eng
+- Nous vous recommandons de ne pas utiliser d'IA pour faire les exercices car vous êtes en phase d'apprentissage.
+
 # Introduction
 
 Futur hacker ? Futur administrateur ou administratrice système Linux ? Futur·e DevOps ? Petit curieux ou petite curieuse ? Passionné(e) d'informatique ? Explorons ensemble cet univers merveilleux qu'est Linux. Linux, ce fameux système d'exploitation open source que tout le monde redoute.
 
-## Avant-propos
-
-Nous vous recommandons de ne pas utiliser d'IA pour faire les exercices car vous êtes en phase d'apprentissage.
+<br>
+<br>
 
 # 1. Historique de Linux
 
@@ -39,7 +43,7 @@ Vous connaissez à présent c'est quoi Linux. Vous pouvez vous demander comment 
 
 1. Le choix de la distribution (Debian ? Ubuntu ? Kali linux ? Linux Mint ? Arch Linux ...)
 2. Le choix de la méthode d'installation (OS principal ? Dualboot ? Machine Virtuelle ? Cloud ? )
-3. L'installation XD
+3. L'installation 🙃​
 
 
 ## Parlons des distributions Linux 
@@ -83,7 +87,7 @@ Nous allons comparer les distributions selon trois critères : **la gestion des 
 2. **Philosophie et public cible**
 
    * **Debian** : Polyvalente, axée sur la liberté logicielle (open source stricte), adaptée aux serveurs, aux postes de travail ou aux utilisateurs techniques.
-   * **Red Hat** : Conçue pour les entreprises (RHEL est payant), avec un support commercial. Fedora vise les innovateurs, et Rocky Linux cible ceux qui cherchent une alternative gratuite à RHEL.
+   * **Red Hat** : Conçue pour les entreprises (RHEL est payant), avec un support commercial. Fedora vise les innovateurs, et Rocky Linux cible ceux qui cherchent une alternative gratuite à RHEL. Pour info, RHEL signifie Red Hat Enterprise Linux.
    * **Arch Linux** : Destinée aux utilisateurs avancés souhaitant un contrôle total, sans configuration par défaut imposée.
 
 3. **Facilité d’utilisation**
@@ -94,6 +98,10 @@ Nous allons comparer les distributions selon trois critères : **la gestion des 
 
 > 💡 Un critère secondaire qu’on pourrait ajouter est la **spécificité de la distribution** : certaines sont orientées sécurité (hacking/pentest), d'autres vers le gaming, ou encore conçues pour un usage quotidien (généralistes) ou adaptées aux machines peu puissantes (légères).
 
+> La liberté étant au coeur de Linux, chaque distribution a donc ses objectifs, ses philosophies, ses histoires mais aussi son propre gestionnaire de paquets.
+
+<br>
+<br>
 
 # Exercice ⚔️
 
@@ -113,7 +121,7 @@ Nous allons comparer les distributions selon trois critères : **la gestion des 
 ## Feedback
 
 > ENG: Please give us your feedback about this chapter.
-
+<>
 > FR: Faites-nous part de votre avis sur ce chapitre.
 
 > 👉🏾 https://forms.gle/1oYNEGehhKUCMcoP7 

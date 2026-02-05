@@ -1,23 +1,21 @@
+# Avant-propos
+
+Nous vous recommandons de ne pas utiliser d'IA pour faire les exercices car vous êtes en phase d'apprentissage.
+
 # Introduction
 
 Même s’il existe une multitude de commandes sous Linux, quelques-unes se révèlent indispensables pour profiter pleinement de ce système. Il y a de fortes chances que vous les utiliserez tous les jours.
 
-## Avant-propos
-
-Nous vous recommandons de ne pas utiliser d'IA pour faire les exercices car vous êtes en phase d'apprentissage.
-
-
 ## Prérequis 
 
 * Avoir une machine virtuelle ou un PC ou un environnement sous Linux (Ubuntu idéalement)
-* Être résilient XD
+* Être résilient 😜
 
 **Info:** Si vous n'avez pas d'environnement linux à votre disposition, vous pouvez vous inscrire sur https://killercoda.com et vous rendre ici https://killercoda.com/playgrounds/scenario/ubuntu pour avoir accès à une machine virtuelle sous Ubuntu 24.04 (sans interface graphique bien sûr !!) pendant 1 heure renouvelable gratuitement.
 
 Vous aurez donc cette vue:
 
-![](./pictures/killerkoda_vm.png)
-
+![](https://raw.githubusercontent.com/N0vachr0n0/Hands-on-Linux-course/refs/heads/main/fr/pictures/killerkoda_vm.png)
 
 <br>
 
@@ -31,8 +29,10 @@ source ~/.bashrc
 
 Vous aurez à présent cette vue:
 
-![](./pictures/update_prompt.png)
+![](https://raw.githubusercontent.com/N0vachr0n0/Hands-on-Linux-course/refs/heads/main/fr/pictures/update_prompt.png)
 
+<br>
+<br>
 
 # À la découverte du terminal Linux
 
@@ -40,7 +40,7 @@ Qui dit terminal Linux, dit principalement invite de commande (prompt) et interp
 
 Exemple de terminal Linux:
 
-![](./pictures/Linux_NOGUI.png)
+![](https://raw.githubusercontent.com/N0vachr0n0/Hands-on-Linux-course/refs/heads/main/fr/pictures/Linux_NOGUI.png)
 
 1. L’invite de commande (prompt)
    - C’est la ligne qui indique où vous êtes et qui vous êtes dans le système. Elle peut varier selon la distribution et la configuration, mais elle ressemble souvent à ça :  
@@ -62,7 +62,7 @@ Exemple de terminal Linux:
 
 # L'arborescence du système Linux
 
-L'arborescence du système Linux, c'est comme une grande armoire bien organisée avec plein de tiroirs et de dossiers. C'est la façon dont les fichiers et les répertoires sont structurés dans un système Linux. Tout commence à partir d'un point unique qu'on appelle la racine, notée simplement par un slash : /. À partir de là, tout s'organise en branches, comme un arbre (d'où le nom "arborescence").
+L'arborescence du système Linux, c'est comme une grande armoire bien organisée avec plein de tiroirs et de dossiers. C'est la façon dont les fichiers et les répertoires sont structurés dans un système Linux. Tout commence à partir d'un point unique qu'on appelle la racine, notée simplement par un slash **" / "**. À partir de là, tout s'organise en branches, comme un arbre (d'où le nom "arborescence").
 
 Voici les principaux répertoires et leur rôle:
 
@@ -83,7 +83,7 @@ Voici les principaux répertoires et leur rôle:
 
 Ci-dessous une petite illustration:
 
-![](./pictures/arborescence.jpg)
+![](https://raw.githubusercontent.com/N0vachr0n0/Hands-on-Linux-course/refs/heads/main/fr/pictures/arborescence.jpg)
 
 <br>
 
@@ -93,6 +93,11 @@ Ci-dessous une petite illustration:
    ```bash
    tree -d -L 1 /
    ```
+
+<br>
+
+**Info en plus:** <br>
+Le répertoire **"/etc"** contient principalement les configurations en rapport avec tout votre système Linux mais il existe aussi un répertoire de configuration appelé **".config"** se trouvant généralement dans le répertoire personnel de chaque utilisateur ( /home/username ). Il s'agit d'un répertoire caché contenant des configurations spécifiques pour des applications en fonction de chaque utilisateur. 
 
 # Comparaison entre l'arborescence Linux et Windows (BONUS)
 
@@ -135,7 +140,7 @@ Et si tu branches une clé USB :
 - **Sur Windows** : Elle devient `E:` ou une autre lettre.
 
 ### En résumé
-Linux est comme une grande bibliothèque avec un seul point d’entrée et des rayons bien étiquetés, tandis que Windows est comme plusieurs petites bibliothèques indépendantes, chacune avec son propre système de rangement. Tu vois la différence ? Si tu veux, je peux approfondir un point précis !
+Linux est comme une grande bibliothèque avec un seul point d’entrée et des rayons bien étiquetés, tandis que Windows est comme plusieurs petites bibliothèques indépendantes, chacune avec son propre système de rangement.
 
 
 
@@ -176,6 +181,7 @@ Linux est comme une grande bibliothèque avec un seul point d’entrée et des r
 
 - **`find`** : Recherche des fichiers ou dossiers dans une arborescence (ex. `find /home -name "fichier.txt"` pour chercher un fichier nommé `fichier.txt` dans `/home`).
 - **`grep`** : Recherche un motif dans des fichiers ou une sortie (ex. `grep "mot" fichier.txt` pour trouver "mot" dans `fichier.txt`, ou `ls | grep "doc"` pour filtrer les résultats de `ls`).
+- **`locate`**: Agent 007. Il permet de faire une recherche ultra-rapide d'un fichier via une base de données indexée sur votre système (ex. `locate fichier.txt`). Il est moins précis si le fichier recherché vient d'être créé. Si le fichier n'apparaît pas, il faudrait donc mettre à jour la base de données avec la commande `sudo updatedb`. 
 
 ## Commandes d’information système
 
@@ -225,7 +231,8 @@ Il faut noter que c'est à force de pratiquer que vous retiendrez ces différent
    cp --help
    man find
    ```
-
+<br>
+<br>
 
 # Entraînement ⚔️
 
@@ -258,6 +265,12 @@ chmod +x BC_EXO_1.sh
 ./BC_EXO_1.sh
 ```
 
+![](https://raw.githubusercontent.com/N0vachr0n0/Hands-on-Linux-course/refs/heads/main/fr/pictures/howtorunex-1.png)
+![](https://raw.githubusercontent.com/N0vachr0n0/Hands-on-Linux-course/refs/heads/main/fr/pictures/howtorunex-2.png)
+![](https://raw.githubusercontent.com/N0vachr0n0/Hands-on-Linux-course/refs/heads/main/fr/pictures/howtorunex-3.png)
+
+<br>
+
 ## Exercice 3 (Deep dive)
 
 * Faire ce challenge https://sadservers.com/scenario/saskatoon
@@ -268,7 +281,7 @@ chmod +x BC_EXO_1.sh
 Pour apprendre à maitriser / se familiariser avec l'éditeur de texte **vim**, nous vous recommandons de passer par **vimtutor**.
 Ouvrez votre terminal et tapez **vimtutor**. Vous aurez un retour similaire à:
 
-![](./pictures/vimtutor.png)
+![](https://raw.githubusercontent.com/N0vachr0n0/Hands-on-Linux-course/refs/heads/main/fr/pictures/vimtutor.png)
 
 ---
 ---

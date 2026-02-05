@@ -1,3 +1,7 @@
+# Avant-propos
+
+Nous vous recommandons de ne pas utiliser d'IA pour faire les exercices car vous êtes en phase d'apprentissage.
+
 # Introduction
 
 Dans ce chapitre, nous parlerons de l'exploitation des firewalls sous Linux.
@@ -5,6 +9,9 @@ Dans ce chapitre, nous parlerons de l'exploitation des firewalls sous Linux.
 ## Prérequis 
 
 Toujours la même histoire. 😉
+
+<br>
+<br>
 
 # Qu'est-ce qu'un firewall ?
 
@@ -103,6 +110,14 @@ firewall-cmd --zone=public --add-port=22/tcp --permanent
 firewall-cmd --zone=public --set-default-zone=drop --permanent
 ```
 
+<br>
+
+**Points Importants:**
+- Faites des recherches sur les différentes zones de firewalld. 
+
+
+<br>
+<br>
 
 # Entraînement ⚔️
 
